@@ -3,7 +3,7 @@
 ************** How to Run**********
 
 1) The package is written using Eclipse IDE with Java 8.
-2) Build and run application (java -jar account-details-0.0.1-SNAPSHOT.jar) and run postman endpoints.
+2) Build (mvn clean install), run application (java -jar account-details-0.0.1-SNAPSHOT.jar) and execute postman endpoints.
 
 ********** Scope for further enhancements ***********  
 
