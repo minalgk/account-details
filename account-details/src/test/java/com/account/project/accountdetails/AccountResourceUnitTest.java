@@ -84,13 +84,10 @@ public class AccountResourceUnitTest {
         account.setLastName("Test");
 		sampleAccountDetails.add(account);
 		
-		given(mockAccountRepository.findAll()).willReturn(sampleAccountDetails);
         // When
-		List<Account> allAccountDetails = accountResource.retrieveAllAccounts();
+		accountResource.deleteAccount(any(Long.class));
 
         // Then
-        assertNotNull(allAccountDetails);
-        assertEquals(account.getFirstName(), allAccountDetails.get(0).getFirstName());
         verify(mockAccountRepository).deleteById(any(Long.class));
     }
 }
